@@ -1,0 +1,195 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mythic Realms Chat</title>
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font: 0.9em/1.5 'Roboto', sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+
+    header {
+      background-color: #4A90E2;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      padding: 0.5rem 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-size: 1rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+
+    main {
+      padding: 2rem;
+    }
+
+
+    .box {
+      width: 80%;
+      max-width: 400px;
+      margin: 2em auto;
+    }
+    .message {
+      width: calc(100% - 100px);
+      border-radius: 15px;
+      padding: 1em;
+    }
+    .person-a .message {
+      background: #d1cdcd;
+    }
+    .person-a {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+    }
+    .person-b {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+    }
+    .icon {
+      --size: 40px;
+      width: var(--size);
+      height: var(--size);
+      background-position: center;
+      background-size: cover;
+      border-radius: 100%;
+      margin-right: 0.8em;
+      position: relative;
+    }
+    .icon.person-a {
+      background: url('https://imgur.com/0ZtxhOZ.png');
+      background-position: center;
+      background-size: cover;
+    }
+    .icon.person-b {
+      background: url('https://imgur.com/3zPfvda.png');
+      background-position: center;
+      background-size: cover;
+      margin-left: 0.8em;
+      margin-right: 0;
+    }
+    .icon::after {
+      content: ' ';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: lightgreen;
+      border-radius: 100%;
+      bottom: 0;
+      right: 0;
+    }
+    .person-b .message {
+      background: #347aeb;
+      margin: 2em 0;
+      margin-left: 100px;
+      color: white;
+      text-align: right;
+    }
+    .input-container {
+      display: flex;
+      margin-top: 1em;
+    }
+    #message-input {
+      flex: 1;
+      padding: 0.8em;
+      border: 1px solid #ccc;
+      border-radius: 15px;
+      font-size: 1em;
+    }
+    #send-button {
+      margin-left: 0.5em;
+      padding: 0.8em 1.5em;
+      border: none;
+      background-color: #347aeb;
+      color: white;
+      font-size: 1em;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+    #send-button:hover {
+      background-color: #285bb5;
+    }
+
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  
+
+  <header>
+    <h1>Mythic Realms</h1>
+  </header>
+
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="chat.html">Chat</a>
+    <a href="#Account">Account</a>
+  </nav>
+
+
+  <main>
+    <h2>Welcome to Mythic Realms Chat</h2>
+
+
+    <!-- Chat App -->
+    <div id="chat">
+      <div class="box">
+        <div id="chat-container">
+       
+        </div>
+        <div class="input-container">
+          <input type="text" id="message-input" placeholder="Type your message..." />
+          <button id="send-button">Send</button>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <footer>
+    <p>&copy; 2024 Mythic Realms. All rights reserved.</p>
+  </footer>
+
+
+  <script src="chat.js"></script>
+</body>
+</html>
