@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const sendButton = document.getElementById('send-button');
   const rollDiceButton = document.getElementById('roll-dice-button'); 
 
-  const ws = new WebSocket('ws://127.0.0.1:8080'); 
+  const ws = new WebSocket('ws://'externalIP':8080'); // Change external IP
 
-  let isPlayingGuessGame = false; // track if the guessing game is active
+  let isPlayingGuessGame = false; // Track if the guessing game is active
 
   // Function to add a new message to the chat
   const addMessage = (text, sender) => {
